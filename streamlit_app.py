@@ -53,7 +53,9 @@ df['smoker'] = df['smoker'].map({'yes':1, 'no':0})
 
 df = transformer.transform(df)
 y_pred = model.predict(df)
+value = y_pred[0]/.012
+value1 = round(value, 2)
 
 
 if st.button("Show Result"):
-    st.header(f" Insurance Prediction is  {round(y_pred[0],2)} INR")
+    st.header(f" Insurance Prediction is  {value1} USD")
