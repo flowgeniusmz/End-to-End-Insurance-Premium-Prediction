@@ -53,7 +53,7 @@ df['smoker'] = df['smoker'].map({'yes':1, 'no':0})
 
 df = transformer.transform(df)
 y_pred = model.predict(df)
-value = y_pred[0]/.012
+value = y_pred[0]*.012
 value1 = round(value, 2)
 
 
